@@ -1,19 +1,11 @@
 class Solution:
     def equalPairs(self, grid: List[List[int]]) -> int:
-
         count = 0
+        convert_grid = list(zip(*grid))
 
-        length = range(1,len(grid[0])+1)
-
-        row_dict = dict(zip(length,grid))
-
-        column_dict = dict(zip(length,list(zip(*grid))))
-
-        for i in length:
-            for j in length:
-                if row_dict[i] == list(column_dict[j]):
-                    count += 1
-
+        for i in range(len(grid[0])):
+            if list(convert_grid[i]) in grid:
+                count += grid.count(list(convert_grid[i]))
         return count
 
         
