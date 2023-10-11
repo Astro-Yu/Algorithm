@@ -26,9 +26,3 @@ class Solution:
         even.next = None # 짝수번째의 끝을 None으로 지정
 
         return odd_dummy.next
-
-
-
-
-
-        
