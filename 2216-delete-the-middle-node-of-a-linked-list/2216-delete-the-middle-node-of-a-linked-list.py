@@ -8,7 +8,7 @@ class Solution:
             slow = slow.next
             fast = fast.next.next
         
-        slow.next = slow.next.next
+        slow.next = slow.next.next # 이 부분이 삭제를 담당함
         return dummy.next
 
         
